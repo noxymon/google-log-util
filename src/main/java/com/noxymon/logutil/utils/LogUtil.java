@@ -1,13 +1,15 @@
 package com.noxymon.logutil.utils;
+
 import com.google.cloud.logging.*;
+
 import java.util.Collections;
 
 public final class LogUtil {
     private final Logging logging = LoggingOptions.getDefaultInstance().getService();
     private static String logName;
 
-    public static LogUtil withLogName(String logName){
-        logName = logName;
+    public static LogUtil withLogName(String nameOfLog) {
+        logName = nameOfLog;
         return new LogUtil();
     }
 
